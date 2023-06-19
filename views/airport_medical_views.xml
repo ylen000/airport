@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="airport_medical_action" model="ir.actions.act_window">
+        <field name="name">出診單</field>
+        <field name="res_model">airport.medical</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="airport_medical_view_tree" model="ir.ui.view">
+        <field name="name">airport.medical.tree</field>
+        <field name="model">airport.medical</field>
+        <field name="arch" type="xml">
+            <tree string="Channel" >
+                <field name="name" string="病人姓名" />
+                <field name="sex_id" string="性別" />
+                <field name="nationality_id" string="國籍" />
+                <field name="incident_date" string="事發日期" />
+                <field name="incident_place_id" string="事故地點" />
+                <field name="incident_time_id" string="事發時段" />
+                <field name="chief_complaint_id" string="主訴" />
+                <field name="diagnosis_id" string="診斷" />
+                <field name="treatment_id" string="處置" />
+                <field name="result_id" string="結果" />
+                <field name="attending_physician_id" string="處置醫師" />
+                <field name="attending_nurse_id" string="隨行護士" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="airport_medical_view_form" model="ir.ui.view">
+        <field name="name">airport.medical.form</field>
+        <field name="model">airport.medical</field>
+        <field name="arch" type="xml">
+            <form string="Test">
+                <sheet>
+                    <h1>
+                        <field name="name" placeholder="姓名"/>
+                    </h1>
+                    <group>
+                        <separator />
+                        <group>
+                            <field name="birthday" string="生日"/>
+                            <field name="sex_id" widget="radio" string="性別"/>
+                            <field name="come_reason_id" string="為何至機場"/>
+                            <field name="nationality_id" string="國籍" />
+                            <field name="race_id" string="種族" />
+                        </group>
+                    </group>
+                    <separator />
+                    <notebook>
+                        <page string="飛航記錄">
+                            <group>
+                                <field name="airport_co_id" string="航空公司"/>
+                                <field name="departure_id" string="啟程地"/>
+                                <field name="arrival_id" string="目的地"/>
+                            </group>
+                        </page>
+                        <page string="事故紀錄" >
+                            <group>
+                                <field name="incident_date" string="事發日期" />
+                                <field name="incident_place_id" string="事故地點" />
+                                <field name="incident_time_id" string="事發時段" />
+                                <field name="notification_time" string="通報時間" />
+                                <field name="arrival_time" string="到達時間"  />
+                            </group>
+                        </page>
+                        <page string="處置紀錄">
+                            <group>
+                                <field name="chief_complaint_id" string="主訴" />
+                                <field name="diagnosis_id" string="診斷" domain="[('use', '=', '1')]" />
+                                <field name="treatment_id" string="處置" />
+                                <field name="result_id" string="結果" />
+                                <field name="treatment_hospital_id" string="若在醫院的處置" />
+                                <field name="personal_opinion" string="個人意見" />
+                                <field name="attending_physician_id" string="負責醫師" />
+                                <field name="attending_nurse_id" string="隨行護士" />
+                                <field name="test1" string="test" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

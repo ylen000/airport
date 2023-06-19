@@ -1,0 +1,31 @@
+from odoo import models, fields, api
+
+
+class AirportMedical(models.Model):
+    _name = 'airport.medical'
+    _description = 'Airport medical visit model'
+
+    name = fields.Char(string='姓名')
+    birthday = fields.Date(string='生日')
+    sex_id = fields.Many2one('airport.medical.sex', string='性別')
+    come_reason_id = fields.Many2one('airport.medical.come', string='為何至機場')
+    nationality_id = fields.Many2one('airport.medical.nationality', string='國籍')
+    race_id = fields.Many2one('airport.medical.race', string='種族')
+    airport_co_id = fields.Many2one('airport.medical.company', string='航空公司')
+    departure_id = fields.Many2one('airport.medical.departure', string='啟程地')
+    arrival_id = fields.Many2one('airport.medical.arrival', string='目的地')
+    incident_date = fields.Date(default=lambda self: fields.Date.today(), string='事發日期')
+    incident_place_id = fields.Many2one('airport.medical.incident.place', string='事故地點')
+    incident_time_id = fields.Many2one('airport.medical.incident.time', string='事發時段')
+    chief_complaint_id = fields.Many2one('airport.medical.chief.complaint', string='主訴')
+    diagnosis_id = fields.Many2one('airport.medical.diagnosis', string='診斷')
+    treatment_id = fields.Many2one('airport.medical.treatment', string='處置')
+    result_id = fields.Many2one('airport.medical.result', string='結果')
+    treatment_hospital_id = fields.Many2one('airport.medical.treatment.hospital', string='若在醫院的處置')
+    personal_opinion = fields.Text(string='個人意見')
+    notification_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='通報時間')
+    arrival_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='到達時間')
+    attending_physician_id = fields.Many2one('airport.medical.attending.physician', string='負責醫師')
+    attending_nurse_id = fields.Many2one('airport.medical.attending.nurse', string='隨行護士')
+    test1 = fields.Char(string='test')
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="airport_menu_root" name="機場出診單" sequence="10">
+        <menuitem id="airport_first_level_menu" name="各式單據" sequence="10">
+            <menuitem id="airport_medical_menu_action" action="airport_medical_action" sequence="11" />
+        </menuitem>
+
+        <menuitem id="airport_first_level_menu3" action="airport_medical_reporting_action" sequence="20" />
+
+        <menuitem id="airport_first_level_menu2" name="各項列表維護" sequence="30">
+            <menuitem id="airport_medical_sex_menu_action" action="airport_medical_sex_action" sequence="31" />
+            <menuitem id="airport_medical_come_menu_action" action="airport_medical_come_action" sequence="32" />
+            <menuitem id="airport_medical_nationality_menu_action" action="airport_medical_nationality_action" sequence="33" />
+            <menuitem id="airport_medical_race_menu_action" action="airport_medical_race_action" sequence="34" />
+            <menuitem id="airport_medical_company_menu_action" action="airport_medical_company_action" sequence="35" />
+            <menuitem id="airport_medical_departure_menu_action" action="airport_medical_departure_action" sequence="36" />
+            <menuitem id="airport_medical_arrival_menu_action" action="airport_medical_arrival_action" sequence="37" />
+            <menuitem id="airport_medical_incident_place_menu_action" action="airport_medical_incident_place_action" sequence="38" />
+            <menuitem id="airport_medical_incident_time_menu_action" action="airport_medical_incident_time_action" sequence="39" />
+            <menuitem id="airport_medical_chief_complaint_menu_action" action="airport_medical_chief_complaint_action" sequence="40" />
+            <menuitem id="airport_medical_diagnosis_menu_action" action="airport_medical_diagnosis_action" sequence="41" />
+            <menuitem id="airport_medical_treatment_menu_action" action="airport_medical_treatment_action" sequence="42" />
+            <menuitem id="airport_medical_result_menu_action" action="airport_medical_result_action" sequence="43" />
+            <menuitem id="airport_medical_treatment_hospital_menu_action" action="airport_medical_treatment_hospital_action" sequence="44" />
+            <menuitem id="airport_medical_attending_physician_menu_action" action="airport_medical_attending_physician_action" sequence="45" />
+            <menuitem id="airport_medical_attending_nurse_menu_action" action="airport_medical_attending_nurse_action" sequence="46" />
+        </menuitem>
+    </menuitem>
+</odoo>
