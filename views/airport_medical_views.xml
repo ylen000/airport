@@ -55,8 +55,13 @@
                                 <field name="arrival_id" string="目的地"/>
                             </group>
                         </page>
-                        <page string="事故紀錄" >
+                        <page string="電傳文件" >
                             <group>
+                                <field name="patient_name" string="病患姓名" />
+                                <field name="nationality_id" string="國籍" />
+                                <field name="sex_id" widget="radio" string="性別"/>
+                                <field name="birthday" string="生日"/>
+                                <field name="airport_co_id" string="航空公司"/>
                                 <field name="incident_date" string="事發日期" />
                                 <field name="incident_place_id" string="事故地點" />
                                 <field name="incident_time_id" string="事發時段" />
