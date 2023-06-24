@@ -15,3 +15,6 @@ from . import airport_medical_result
 from . import airport_medical_treatment_hospital
 from . import airport_medical_attending_physician
 from . import airport_medical_attending_nurse
+from . import airport_medical_identity
+from . import airport_medical_passing
+from . import airport_medical_exit

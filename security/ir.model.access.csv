@@ -1,6 +1,7 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 access_airport_medical,access_airport_medical,model_airport_medical,base.group_user,1,1,1,1
 access_airport_medical_sex,access_airport_medical_sex,model_airport_medical_sex,base.group_user,1,1,1,1
+access_airport_medical_identity,access_airport_medical_identity,model_airport_medical_identity,base.group_user,1,1,1,1
 access_airport_medical_come,access_airport_medical_come,model_airport_medical_come,base.group_user,1,1,1,1
 access_airport_medical_nationality,access_airport_medical_nationality,model_airport_medical_nationality,base.group_user,1,1,1,1
 access_airport_medical_race,access_airport_medical_race,model_airport_medical_race,base.group_user,1,1,1,1

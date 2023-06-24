@@ -9,6 +9,7 @@
     ],
     'data': [
         'security/ir.model.access.csv',
+        'views/airport_medical_identity_views.xml',
         'views/airport_medical_sex_views.xml',
         'views/airport_medical_come_views.xml',
         'views/airport_medical_nationality_views.xml',
@@ -28,6 +29,9 @@
         'views/airport_medical_views.xml',
         'views/airport_medical_reporting_views.xml',
         'views/airport_menus.xml',
+        'views/airport_medical_passing_views.xml',
+        'views/airport_medical_exit_views.xml',
+        'data/airport.medical.identity.csv',
         'data/airport.medical.sex.csv',
         'data/airport.medical.come.csv',
         'data/airport.medical.nationality.csv',
@@ -43,7 +47,9 @@
         'data/airport.medical.result.csv',
         'data/airport.medical.treatment.hospital.csv',
         'data/airport.medical.attending.physician.csv',
-        'data/airport.medical.attending.nurse.csv'
+        'data/airport.medical.attending.nurse.csv',
+        'data/airport.medical.passing.csv',
+        'data/airport.medical.exit.csv'
     ],
     'application': True,
 }
