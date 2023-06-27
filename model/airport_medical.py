@@ -41,3 +41,11 @@ class AirportMedical(models.Model):
     Phone = fields.Char(string='聯絡電話')
     Airplane = fields.Char(string='班機')
     exit_id  = fields.Many2one('airport.medical.exit', string='出入境')
+    content= fields.Text(string='內容')
+    def record(self):
+        # 在按钮点击时执行的操作
+        # 编写您希望执行的任何自定义代码
+        pass
+    def reset(self):
+        self.content = False
+
