@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-
+import datetime
 
 class AirportMedical(models.Model):
     _name = 'airport.medical'
@@ -42,10 +42,10 @@ class AirportMedical(models.Model):
     Airplane = fields.Char(string='班機')
     exit_id  = fields.Many2one('airport.medical.exit', string='出入境')
     content= fields.Text(string='內容')
+    current_time = fields.Datetime(string='紀錄時間', default=datetime.datetime.now(), readonly=True)
+    display_content = fields.Text(string='紀錄內容', readonly=True)
     def record(self):
-        # 在按钮点击时执行的操作
-        # 编写您希望执行的任何自定义代码
-        pass
+        self.display_content = self.content
     def reset(self):
         self.content = False
 

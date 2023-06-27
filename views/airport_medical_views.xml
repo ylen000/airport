@@ -94,6 +94,10 @@
                                 <button name="record" string="紀錄" icon="fa-check" type="object" />
                                 <button name="reset" string="重寫" icon="fa-times" type="object" />
                             </table>
+                            <group>
+                             <field name="current_time"/>
+                             <field name="display_content" readonly="1"/>
+                            </group>
                         </page>
                         <page string="處置紀錄">
                             <group>
