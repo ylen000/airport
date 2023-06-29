@@ -44,6 +44,10 @@ class AirportMedical(models.Model):
     content= fields.Text(string='內容')
     current_time = fields.Datetime(string='紀錄時間', default=datetime.datetime.now(), readonly=True)
     display_content = fields.Text(string='紀錄內容', readonly=True)
+    doctor_remark = fields.Char(string='醫師囑言及備註')
+    diagnosis_category = fields.Many2one('airport.medical.diagnosis', string='')
+    diagnosis_detail = fields.Many2one('airport.medical.diagnosis')
+
     def record(self):
         self.display_content = self.content
     def reset(self):

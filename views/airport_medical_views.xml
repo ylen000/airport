@@ -112,6 +112,68 @@
                                 <field name="test1" string="test" />
                             </group>
                         </page>
+                        <page string="診斷證明">
+                        <group>
+                            <group>
+                                <field name="name" string="姓名" />
+                            </group>
+                            <group>
+                                <field name="birthday" string="生日" />
+                            </group>
+                        </group>
+                         <group>
+                            <group>
+                                <field name="sex_id" string="生理性別" />
+                            </group>
+                            <group>
+                                <field name="name" string="護照號碼" />
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <group>
+                                    <field name="diagnosis_id" string="診斷"/>
+                                </group>
+                                <group>
+                                    <field name="diagnosis_category" string="-" />
+                                </group>
+                            </group>
+                            <group>
+                                <field name="diagnosis_detail" string="-" />
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <group>
+                                    <field name="diagnosis_category" string="醫師囑言"/>
+                                </group>
+                                <group>
+                                    <field name="diagnosis_detail" string="-" />
+                                </group>
+                            </group>
+                            <group>
+                                <group>
+                                    <field name="diagnosis_detail" string="-" />
+                                </group>
+                                <group>
+                                </group>
+                            </group>
+                        </group>
+                        <group>
+                             <field name="doctor_remark" string="備註" />
+                        </group>
+                        <group>
+                            <group>
+                                <group>
+                                    <field name="attending_physician_id" string="院長"/>
+                                </group> 
+                                
+                                <group>
+                                    <field name="attending_physician_id" string="診治醫師" />
+                                </group> 
+                            </group>
+                        </group>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
