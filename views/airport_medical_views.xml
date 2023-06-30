@@ -129,7 +129,7 @@
                                 <field name="name" string="護照號碼" />
                             </group>
                         </group>
-                        <group>
+                        <group string="診斷結果">
                             <group>
                                 <group>
                                     <field name="diagnosis_id" string="診斷"/>
@@ -142,7 +142,7 @@
                                 <field name="diagnosis_detail" string="-" />
                             </group>
                         </group>
-                        <group>
+                        <group string="醫師囑言備註">
                             <group>
                                 <group>
                                     <field name="diagnosis_category" string="醫師囑言"/>
@@ -162,7 +162,7 @@
                         <group>
                              <field name="doctor_remark" string="備註" />
                         </group>
-                        <group>
+                        <group  string="簽署">
                             <group>
                                 <group>
                                     <field name="attending_physician_id" string="院長"/>
