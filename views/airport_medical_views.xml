@@ -188,6 +188,58 @@
                                     <field name="personal_opinion" string="體溫"  />
                                 </group>
                             </group>
+                            <group string="轉診後送">
+                                <group>
+                                    <group>
+                                        <field name="assist_screening_id" string="一般通關" />
+                                    </group>
+                                    <group>
+                                        <field name="assist_screening_id" string="緊急通關" />
+                                    </group>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="assist_screening_id" string="公務門" />
+                                    </group>
+                                    <group>
+                                        <field name="assist_screening_id" string="機坪" />
+                                    </group>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="救護車">
+                                    <field name="assist_screening_id" string="醫療中心" />
+                                    <field name="incident_place_id" string="民間" />
+                                    <field name="incident_time_id" string="消防隊" />
+                                </group>
+                                <group string="轉送">
+                                    <field name="assist_screening_id" string="民間"  />
+                                    <field name="assist_screening_id" string="消防隊"  />
+                                    <field name="personal_opinion" string="轉送醫院"  />
+                                    <field name="personal_opinion" string="隨車人員" />
+                                </group>
+                            </group>
+                            <group string="醫療費用">
+                                <field name="Phone" string="初診費"/>
+                                <field name="Phone" string="救護車費用"/>
+                            </group>
+                            <group>
+                                <group string="自付">
+                                    <field name="assist_screening_id" string="是否自付"/>
+                                    <field name="Phone" string="費用"/>
+                                </group>
+                                <group string="請款">
+                                    <field name="assist_screening_id" string="是否請款"/>
+                                    <field name="Phone" string="費用"/>
+                                </group>
+                            </group>
+                            <group string="自付">
+                                <field name="assist_screening_id" string="支付方式" />
+                                <field name="assist_screening_id" string="幣別" />
+                                <field name="assist_screening_id" string="兌換後台幣金額" />
+                                <field name="assist_screening_id" string="是否收費異常" />
+                                <field name="personal_opinion" string="收費異常原因" />
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
