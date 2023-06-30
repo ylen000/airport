@@ -47,6 +47,7 @@ class AirportMedical(models.Model):
     doctor_remark = fields.Char(string='醫師囑言及備註')
     diagnosis_category = fields.Many2one('airport.medical.diagnosis', string='')
     diagnosis_detail = fields.Many2one('airport.medical.diagnosis')
+    doctor_comment= fields.Many2one('airport.medical.diagnosis', string='')
     assist_screening_id = fields.Many2one('airport.medical.assist.screening', string='協助篩檢')
     def record(self):
         self.display_content = self.content
