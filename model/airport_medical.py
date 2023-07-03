@@ -53,4 +53,25 @@ class AirportMedical(models.Model):
         self.display_content = self.content
     def reset(self):
         self.content = False
+    temperature = fields.Float(string='體溫')
+    temperature_status = fields.Char(string='體溫狀態', compute='_compute_temperature_status', store=True)
 
+    @api.depends('temperature')
+    def _compute_temperature_status(self):
+        for record in self:
+            if record.temperature and record.temperature <= 37.5:
+                record.temperature_status = '體溫正常'
+            elif record.temperature and record.temperature > 37.5:
+                record.temperature_status = '體溫異常'
+            else:
+                record.temperature_status = ''
+    pulse = fields.Char(string='脈搏')
+    breath = fields.Char(string='呼吸')
+    blood_pressureh = fields.Char(string='血壓')
+    blood_oxygen = fields.Char(string='血氧') 
+    consciousness = fields.Char(string='意識', readonly=True) 
+    allergy = fields.Char(string='藥物過敏', readonly=True) 
+    is_active1 = fields.Boolean(string='Clear')
+    is_active2 = fields.Boolean(string='GCS')
+    is_active3 = fields.Boolean(string='無')
+    is_active4 = fields.Boolean(string='有')
