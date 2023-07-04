@@ -50,7 +50,8 @@
         'data/airport.medical.attending.nurse.csv',
         'data/airport.medical.passing.csv',
         'data/airport.medical.assist.screening.csv',
-        'data/airport.medical.exit.csv'
+        'data/airport.medical.exit.csv',
+        'data/airport.medical.dcomment.csv'
     ],
     'application': True,
 }
