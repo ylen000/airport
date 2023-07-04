@@ -76,7 +76,7 @@
                                 <field name="birthday" string="生日"/>
                                 <field name="airport_co_id" string="航空公司"/>
                                 <field name="incident_date" string="事發日期" />
-                                <field name="incident_place_id" string="事故地點" />
+                                <field name="notify_staff" string="通報人員" />
                                 <field name="incident_time_id" string="事發時段" />
                                 <field name="notification_time" string="通報時間" />
                                 <field name="arrival_time" string="到達時間"  />
@@ -86,9 +86,24 @@
                                 <field name="nationality_id" string="國籍" />
                                 <field name="sex_id" string="性別"/>
                                 <field name="flight_number" string="班機"/>
+                                <field name="incident_place_id" string="事故地點" />                                
                                 </group>                 
                                 
-                                
+                                <group>
+                                </group>
+                                <group>
+                                <group>
+                                <group>
+                                <field name="immigration_status1" string="出境" />
+                                </group>
+                                <group>
+                                <field name="immigration_status2" string="入境" />
+                                </group>
+                                </group>
+                                <group>
+                                <field name="immigration_status3" string="過境" />
+                                </group>
+                                </group>
                             </group>
                         </page>
                          <page string="護理紀錄" >
