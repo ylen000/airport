@@ -20,6 +20,7 @@ class AirportMedical(models.Model):
     sex_id = fields.Many2one('airport.medical.sex', string='性別')
     birthday = fields.Date(default=lambda self: fields.Date.today(), string='生日')
     airport_co_id = fields.Many2one('airport.medical.company', string='航空公司')
+    flight_number = fields.Char(string='班機')
     incident_date = fields.Date(default=lambda self: fields.Date.today(), string='事發日期')
     incident_place_id = fields.Many2one('airport.medical.incident.place', string='事故地點')
     incident_time_id = fields.Many2one('airport.medical.incident.time', string='事發時段')

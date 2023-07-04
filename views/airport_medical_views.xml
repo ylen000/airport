@@ -41,7 +41,7 @@
                         <group>
                             <field name="identity_id" widget="radio" options="{'horizontal': true}" string="身分"/>
                             <field name="birthday" string="生日"/>
-                            <field name="sex_id" widget="radio" options="{'horizontal': true}" string="性別"/>
+                            <field name="sex_id"  options="{'horizontal': true}" string="性別"/>
                             <field name="password_no" string="護照號碼"/>
                             <field name="nationality_id" string="國籍" />
                             <field name="Date" string="日期"/>
@@ -71,9 +71,8 @@
                         </page>
                         <page string="電傳文件" >
                             <group>
+                                <group>
                                 <field name="patient_name" string="病患姓名" />
-                                <field name="nationality_id" string="國籍" />
-                                <field name="sex_id" widget="radio" string="性別"/>
                                 <field name="birthday" string="生日"/>
                                 <field name="airport_co_id" string="航空公司"/>
                                 <field name="incident_date" string="事發日期" />
@@ -81,6 +80,15 @@
                                 <field name="incident_time_id" string="事發時段" />
                                 <field name="notification_time" string="通報時間" />
                                 <field name="arrival_time" string="到達時間"  />
+                                </group>
+
+                                <group>
+                                <field name="nationality_id" string="國籍" />
+                                <field name="sex_id" string="性別"/>
+                                <field name="flight_number" string="班機"/>
+                                </group>                 
+                                
+                                
                             </group>
                         </page>
                          <page string="護理紀錄" >
