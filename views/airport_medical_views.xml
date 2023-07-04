@@ -134,54 +134,79 @@
                                     <field name="chief_complaint_id" string="主訴" />
                                 </group>
                             </group>
-                            <group  string="生命跡象">
-                            <group>
+                                <group  string="生命跡象">
                                 <group>
-                                    <field name="temperature" string="體溫(℃)" />
-                                </group> 
+                                     <group>
+                                         <field name="temperature" string="體溫(℃)" placeholder="輸入兩位整數和一位小數點" attrs="{'digits': (2, 1)}"/>
+                                     </group> 
                                 
-                                <group>
-                                     <field name="temperature_status" string="體溫狀態" readonly="1"/>
-                                </group> 
-                                <group>
-                                     <field name="pulse" string="脈搏" />
-                                </group> 
-                                <group>
-                                    <field name="breath" string="呼吸" />
-                                </group> 
-                                <group>
-                                    <field name="blood_pressureh" string="血壓" />
-                                </group> 
-                                <group>
-                                    <field name="blood_oxygen" string="血氧(%)" />
-                                </group> 
-                                <group>
-                                    <field name="consciousness" string="意識" />
-                                </group> 
-                                <group>
+                                     <group>
+                                         <field name="temperature_status" string="體溫狀態" readonly="1"/>
+                                     </group> 
+                                     <group>
+                                         <field name="pulse" string="脈搏" />
+                                     </group> 
+                                     <group>
+                                         <field name="breath" string="呼吸" />
+                                     </group> 
+                                     <group>
+                                         <field name="blood_pressureh" string="血壓(mmHg)" />
+                                     </group> 
+                                     <group>
+                                         <field name="blood_oxygen" string="血氧(%)" />
+                                     </group> 
+                                     <group>
+                                         <field name="consciousness" string="意識" />
+                                     </group> 
+                                     <group>
                                     
-                                </group> 
+                                     </group> 
+                                     <group>
+                                         <field name="is_active1" string="Clear" attrs="{'readonly': [('is_active2', '=', True)]}"/>
+                                     </group> 
+                                     <group>
+                                         <field name="is_active2" string="GCS" attrs="{'readonly': [('is_active1', '=', True)]}"/>
+                                     </group> 
+                                </group>
+                                </group>
+                                <group string="過去病史">
                                 <group>
-                                     <field name="is_active1" string="Clear"/>
-                                </group> 
-                                <group>
-                                     <field name="is_active2" string="GCS"/>
-                                </group> 
-                                <group  string="過去病史">
-                                  <group>
-                                      <field name="allergy" string="藥物過敏" />
-                                  </group>   
-                                <group>           
-                                </group> 
-                                <group>
-                                     <field name="is_active3" string="無"/>
-                                </group> 
-                                <group>
-                                     <field name="is_active4" string="有"/>
-                                </group> 
-                               </group>  
-                            </group>
-                        </group>
+                                     <group>
+                                         <field name="allergy" string="藥物過敏" />
+                                     </group>   
+                                     <group>           
+                                     </group> 
+                                     <group>
+                                         <field name="is_active4" string="有" attrs="{'readonly': [('is_active3', '=', True)]}"/>
+                                     </group>
+                                     <group>
+                                         <field name="is_active3" string="無" attrs="{'readonly': [('is_active4', '=', True)]}"/>
+                                     </group>
+                                     <group name="input_group" attrs="{'invisible': [('is_active4', '=', False)]}">
+                                         <field name="input_field" string="名稱"/>
+                                     </group>
+                                </group>
+                                </group>
+                                <group string="身體檢查">
+                                    <group>
+                                    <group>
+                                        <field name="head" string="頭頸部"/>
+                                    </group> 
+                                    <group>
+                                        <field name="chest" string="胸部"/>
+                                    </group> 
+                                    <group>
+                                        <field name="abdomen" string="腹部"/>
+                                    </group> 
+                                    <group>
+                                        <field name="limbs" string="四肢"/>
+                                    </group> 
+                                    <group>
+                                        <field name="other" string="其他"/>
+                                    </group> 
+                                    </group>
+                                </group>
+                                
                         </page>
                         
                         <page string="處置紀錄">

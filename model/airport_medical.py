@@ -60,7 +60,7 @@ class AirportMedical(models.Model):
         self.display_content = self.content
     def reset(self):
         self.content = False
-    temperature = fields.Float(string='體溫')
+    temperature = fields.Float(string='體溫', digits=(2, 1))
     temperature_status = fields.Char(string='體溫狀態', compute='_compute_temperature_status', store=True)
 
     @api.depends('temperature')
@@ -80,5 +80,11 @@ class AirportMedical(models.Model):
     allergy = fields.Char(string='藥物過敏', readonly=True) 
     is_active1 = fields.Boolean(string='Clear')
     is_active2 = fields.Boolean(string='GCS')
-    is_active3 = fields.Boolean(string='無')
-    is_active4 = fields.Boolean(string='有')
+    is_active3 = fields.Boolean(string="無")
+    is_active4 = fields.Boolean(string="有")
+    input_field = fields.Char(string="藥物名稱")
+    head = fields.Char(string="頭頸部")
+    chest = fields.Char(string="胸部")
+    abdomen = fields.Char(string="腹部")
+    limbs = fields.Char(string="四肢")
+    other = fields.Char(string="其他")
