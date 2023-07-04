@@ -12,6 +12,7 @@
         'views/airport_medical_identity_views.xml',
         'views/airport_medical_sex_views.xml',
         'views/airport_medical_come_views.xml',
+        'views/airport_medical_comment_views.xml',
         'views/airport_medical_nationality_views.xml',
         'views/airport_medical_race_views.xml',
         'views/airport_medical_company_views.xml',
@@ -34,6 +35,7 @@
         'data/airport.medical.identity.csv',
         'data/airport.medical.sex.csv',
         'data/airport.medical.come.csv',
+        'data/airport.medical.comment.csv',
         'data/airport.medical.nationality.csv',
         'data/airport.medical.race.csv',
         'data/airport.medical.company.csv',
@@ -50,8 +52,8 @@
         'data/airport.medical.attending.nurse.csv',
         'data/airport.medical.passing.csv',
         'data/airport.medical.assist.screening.csv',
-        'data/airport.medical.exit.csv',
-        'data/airport.medical.dcomment.csv'
+        'data/airport.medical.exit.csv'
+       
     ],
     'application': True,
 }

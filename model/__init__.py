@@ -1,6 +1,7 @@
 from . import airport_medical
 from . import airport_medical_sex
 from . import airport_medical_come
+from . import airport_medical_comment
 from . import airport_medical_nationality
 from . import airport_medical_race
 from . import airport_medical_company

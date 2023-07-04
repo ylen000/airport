@@ -207,15 +207,15 @@
                         <group string="醫師囑言備註">
                             <group>
                                 <group>
-                                    <field name="doctor_comment" string="醫師囑言"/>
+                                    <field name="comment_id" string="醫師囑言"/>
                                 </group>
                                 <group>
-                                    <field name="doctor_comment" string="-" />
+                                    <field name="comment_id" string="-" />
                                 </group>
                             </group>
                             <group>
                                 <group>
-                                    <field name="doctor_comment" string="-" />
+                                    <field name="comment_id" string="-" />
                                 </group>
                                 <group>
                                 </group>
