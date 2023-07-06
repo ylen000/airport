@@ -104,6 +104,27 @@ class AirportMedical(models.Model):
     abdomen = fields.Char(string="腹部")
     limbs = fields.Char(string="四肢")
     other = fields.Char(string="其他")
+     # 廖庭萱
+    landing_time_yesno = fields.Boolean(string='是')
+    landing_time = fields.Datetime(string='落地時間', default=datetime.datetime.now(), readonly=True)
+    informing_time = fields.Datetime(string='通報時間', default=datetime.datetime.now(), readonly=True)
+    reporting_unit = fields.Char(string="通報單位")
+    reporting_unit_personnel = fields.Char(string="通報單位人員")
+    reporting_unit_personnel_phone = fields.Char(string="電話")
+    inform_campingoffice_time = fields.Datetime(string='通知營安處時間', default=datetime.datetime.now(), readonly=True)
+    arrive_yesno = fields.Char(string='是否到達現場')
+    is_active5 = fields.Boolean(string="是")
+    is_active6 = fields.Boolean(string="否")
+    is_active7 = fields.Boolean(string="T1")
+    is_active8 = fields.Boolean(string="T2")
+    informing_place = fields.Char(string='通報事故地點')
+    informing_place_input_field = fields.Char(string="其他地點")
+    arriving_time = fields.Datetime(string='醫護抵達時間', default=datetime.datetime.now(), readonly=True)
+    arrive_in10mins = fields.Char(string="是否十分鐘內抵達")
+    is_active9 = fields.Boolean(string="是")
+    is_active10 = fields.Boolean(string="否")
+    arrive_in10mins_input_field =  fields.Char(string="原因")
+    checking_time = fields.Datetime(string='檢查時間', default=datetime.datetime.now(), readonly=True)
     
     
     
