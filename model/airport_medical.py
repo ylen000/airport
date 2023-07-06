@@ -29,7 +29,13 @@ class AirportMedical(models.Model):
     immigration_status2 = fields.Boolean(string='入境')
     immigration_status3 = fields.Boolean(string='過境')
     initial_diagnosis = fields.Text(string='初步診斷')
-    
+    follow_up_results = fields.Selection(string='後續結果',selection=[('自行返家', '自行返家'), ('繼續搭機', '繼續搭機'), ('轉送至', '轉送至:'), ('醫療中心觀察', '醫療中心觀察'), ('空跑', '空跑'), ('其他', '其他')],
+        help="Type is used to separate Leads and Opportunities")
+    follow_up_results_replenish = fields.Char(string=' ')
+    medical_bills = fields.Char(string='醫療費用收費', readonly=True)
+    medical_bills_yes = fields.Boolean(string='是')
+    medical_bills_no = fields.Boolean(string='否')
+    charge_amount = fields.Char(string='收費金額')
     incident_time_id = fields.Many2one('airport.medical.incident.time', string='事發時段')
     chief_complaint_id = fields.Many2one('airport.medical.chief.complaint', string='主訴')
     diagnosis_id = fields.Many2one('airport.medical.diagnosis', string='診斷')

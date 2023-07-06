@@ -104,15 +104,46 @@
 
                                 <group>
                                 <field name="notification_time" string="通報時間" />
-                                <field name="initial_diagnosis" string="初步診斷" />
                                 </group>
 
                                 <group>
                                 <field name="clinic_time" string="診療時間"  />
                                 </group>
 
-                               
+                                <group>
+                                <field name="initial_diagnosis" string="初步診斷" />
+                                </group>
 
+                                <group>
+                                
+                                </group>
+                                                       
+                                <group>
+                                <field name="follow_up_results" string="後續結果" />
+                                </group>
+
+                                <group>
+                                <field name="follow_up_results_replenish"  />
+                                </group>
+
+                            </group>
+                            <group string="其他事宜">
+                                <group>
+                                <field name="medical_bills" string="醫療費用收費" />
+                                </group>
+                                <group>
+                                </group>
+                                <group>
+                                <group>
+                                <field name="medical_bills_yes" string="是" />
+                                </group>
+                                <group>
+                                <field name="medical_bills_no" string="否" />
+                                </group>
+                                </group>
+                                <group>
+                                <field name="charge_amount" string="收費金額" />
+                                </group>
                             </group>
                         </page>
                          <page string="護理紀錄" >
