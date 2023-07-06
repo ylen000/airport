@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 import datetime
 
 class AirportMedical(models.Model):
@@ -49,6 +50,10 @@ class AirportMedical(models.Model):
     content= fields.Text(string='內容')
     current_time = fields.Datetime(string='紀錄時間', default=datetime.datetime.now(), readonly=True)
     display_content = fields.Text(string='紀錄內容', readonly=True)
+    def record(self):
+        self.display_content = self.content
+    def reset(self):
+        self.content = False
     doctor_remark = fields.Char(string='醫師囑言及備註')
     diagnosis_category = fields.Many2one('airport.medical.diagnosis', string='')
     diagnosis_detail = fields.Many2one('airport.medical.diagnosis')
@@ -56,13 +61,12 @@ class AirportMedical(models.Model):
     comment2= fields.Many2one('airport.medical.comment')
     comment3= fields.Many2one('airport.medical.comment')
     assist_screening_id = fields.Many2one('airport.medical.assist.screening', string='協助篩檢')
-    def record(self):
-        self.display_content = self.content
-    def reset(self):
-        self.content = False
     temperature = fields.Float(string='體溫', digits=(2, 1))
     temperature_status = fields.Char(string='體溫狀態', compute='_compute_temperature_status', store=True)
-
+    @api.onchange('temperature')
+    def _onchange_temperature(self):
+        if self.temperature and int(self.temperature) > 99:
+            raise ValidationError('不能輸入超過兩位整數！')
     @api.depends('temperature')
     def _compute_temperature_status(self):
         for record in self:

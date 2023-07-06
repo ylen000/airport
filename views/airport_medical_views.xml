@@ -109,7 +109,7 @@
                          <page string="護理紀錄" >
                             <group>
                                 <group>
-                                     <field name="patient_name" string="病患姓名" required="true"/>
+                                    <field name="name" string="姓名" />
                                 </group>
                                 <group>
                                     <field name="password_no" string="護照號碼"  required="true"/>
@@ -137,7 +137,7 @@
                                 <group  string="生命跡象">
                                 <group>
                                      <group>
-                                         <field name="temperature" string="體溫(℃)" placeholder="輸入兩位整數和一位小數點" attrs="{'digits': (2, 1)}"/>
+                                         <field name="temperature" string="體溫(℃)" placeholder="輸入兩位整數和一位小數點"/>
                                      </group> 
                                 
                                      <group>
