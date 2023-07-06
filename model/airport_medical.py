@@ -28,6 +28,8 @@ class AirportMedical(models.Model):
     immigration_status1 = fields.Boolean(string='出境')
     immigration_status2 = fields.Boolean(string='入境')
     immigration_status3 = fields.Boolean(string='過境')
+    initial_diagnosis = fields.Text(string='初步診斷')
+    
     incident_time_id = fields.Many2one('airport.medical.incident.time', string='事發時段')
     chief_complaint_id = fields.Many2one('airport.medical.chief.complaint', string='主訴')
     diagnosis_id = fields.Many2one('airport.medical.diagnosis', string='診斷')
@@ -36,7 +38,7 @@ class AirportMedical(models.Model):
     treatment_hospital_id = fields.Many2one('airport.medical.treatment.hospital', string='若在醫院的處置')
     personal_opinion = fields.Text(string='個人意見')
     notification_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='通報時間')
-    arrival_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='到達時間')
+    clinic_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='診療時間')
     attending_physician_id = fields.Many2one('airport.medical.attending.physician', string='負責醫師')
     attending_nurse_id = fields.Many2one('airport.medical.attending.nurse', string='隨行護士')
     test1 = fields.Char(string='test')

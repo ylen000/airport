@@ -76,10 +76,7 @@
                                 <field name="birthday" string="生日"/>
                                 <field name="airport_co_id" string="航空公司"/>
                                 <field name="incident_date" string="事發日期" />
-                                <field name="notify_staff" string="通報人員" />
-                                <field name="incident_time_id" string="事發時段" />
-                                <field name="notification_time" string="通報時間" />
-                                <field name="arrival_time" string="到達時間"  />
+                                <field name="notify_staff" string="通報人員" /> 
                                 </group>
 
                                 <group>
@@ -104,6 +101,18 @@
                                 <field name="immigration_status3" string="過境" />
                                 </group>
                                 </group>
+
+                                <group>
+                                <field name="notification_time" string="通報時間" />
+                                <field name="initial_diagnosis" string="初步診斷" />
+                                </group>
+
+                                <group>
+                                <field name="clinic_time" string="診療時間"  />
+                                </group>
+
+                               
+
                             </group>
                         </page>
                          <page string="護理紀錄" >
