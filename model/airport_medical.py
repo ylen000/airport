@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 import datetime
 
 class AirportMedical(models.Model):
@@ -27,6 +28,18 @@ class AirportMedical(models.Model):
     immigration_status1 = fields.Boolean(string='出境')
     immigration_status2 = fields.Boolean(string='入境')
     immigration_status3 = fields.Boolean(string='過境')
+    initial_diagnosis = fields.Text(string='初步診斷')
+    follow_up_results = fields.Selection(string='後續結果',selection=[('自行返家', '自行返家'), ('繼續搭機', '繼續搭機'), ('轉送至', '轉送至:'), ('醫療中心觀察', '醫療中心觀察'), ('空跑', '空跑'), ('其他', '其他')],
+        help="Type is used to separate Leads and Opportunities")
+    follow_up_results_replenish = fields.Char(string=' ')
+    medical_bills = fields.Char(string='醫療費用收費', readonly=True)
+    medical_bills_yes = fields.Boolean(string='是')
+    medical_bills_no = fields.Boolean(string='否')
+    charge_amount = fields.Char(string='收費金額')
+    T1_telephone_number_of_Operation_Safety_Department = fields.Boolean(string='T1-032733578')
+    T2_telephone_number_of_Operation_Safety_Department = fields.Boolean(string='T2-032733367')
+    Medical_Center_T1_Telephone = fields.Boolean(string='T1-033834225')
+    Medical_Center_T2_Telephone = fields.Boolean(string='T2-033983485')
     incident_time_id = fields.Many2one('airport.medical.incident.time', string='事發時段')
     chief_complaint_id = fields.Many2one('airport.medical.chief.complaint', string='主訴')
     diagnosis_id = fields.Many2one('airport.medical.diagnosis', string='診斷')
@@ -35,7 +48,7 @@ class AirportMedical(models.Model):
     treatment_hospital_id = fields.Many2one('airport.medical.treatment.hospital', string='若在醫院的處置')
     personal_opinion = fields.Text(string='個人意見')
     notification_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='通報時間')
-    arrival_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='到達時間')
+    clinic_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='診療時間')
     attending_physician_id = fields.Many2one('airport.medical.attending.physician', string='負責醫師')
     attending_nurse_id = fields.Many2one('airport.medical.attending.nurse', string='隨行護士')
     test1 = fields.Char(string='test')
@@ -49,6 +62,10 @@ class AirportMedical(models.Model):
     content= fields.Text(string='內容')
     current_time = fields.Datetime(string='紀錄時間', default=datetime.datetime.now(), readonly=True)
     display_content = fields.Text(string='紀錄內容', readonly=True)
+    def record(self):
+        self.display_content = self.content
+    def reset(self):
+        self.content = False
     doctor_remark = fields.Char(string='醫師囑言及備註')
     diagnosis_category = fields.Many2one('airport.medical.diagnosis', string='')
     diagnosis_detail = fields.Many2one('airport.medical.diagnosis')
@@ -56,13 +73,12 @@ class AirportMedical(models.Model):
     comment2= fields.Many2one('airport.medical.comment')
     comment3= fields.Many2one('airport.medical.comment')
     assist_screening_id = fields.Many2one('airport.medical.assist.screening', string='協助篩檢')
-    def record(self):
-        self.display_content = self.content
-    def reset(self):
-        self.content = False
     temperature = fields.Float(string='體溫', digits=(2, 1))
     temperature_status = fields.Char(string='體溫狀態', compute='_compute_temperature_status', store=True)
-
+    @api.onchange('temperature')
+    def _onchange_temperature(self):
+        if self.temperature and int(self.temperature) > 99:
+            raise ValidationError('不能輸入超過兩位整數！')
     @api.depends('temperature')
     def _compute_temperature_status(self):
         for record in self:
