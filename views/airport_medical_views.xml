@@ -144,7 +144,21 @@
                                 <group>
                                 <field name="charge_amount" string="收費金額" />
                                 </group>
-                            </group>
+                                <group>
+                                <field name="attending_physician_id" string="醫師" />
+                                </group>
+                                <group>
+                                <field name="attending_nurse_id" string="護士" />
+                                </group>
+                                <group string="TO:桃園國際機場股份有限公司營運安全處">
+                                <field name="T1_telephone_number_of_Operation_Safety_Department" string="T1-032733578" />
+                                <field name="T2_telephone_number_of_Operation_Safety_Department" string="T2-032733367" />
+                                </group>
+                                <group string="From:聯新國際醫院桃園國際機場醫療中心">
+                                <field name="Medical_Center_T1_Telephone" string="T1-033834225" />
+                                <field name="Medical_Center_T2_Telephone" string="T2-033983485" />
+                                </group>
+                                </group>
                         </page>
                          <page string="護理紀錄" >
                             <group>
