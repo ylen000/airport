@@ -104,3 +104,6 @@ class AirportMedical(models.Model):
     abdomen = fields.Char(string="腹部")
     limbs = fields.Char(string="四肢")
     other = fields.Char(string="其他")
+    
+    
+    
