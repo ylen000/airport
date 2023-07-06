@@ -125,6 +125,7 @@ class AirportMedical(models.Model):
     is_active10 = fields.Boolean(string="否")
     arrive_in10mins_input_field =  fields.Char(string="原因")
     checking_time = fields.Datetime(string='檢查時間', default=datetime.datetime.now(), readonly=True)
+    emt_sign=fields.Binary(string="院長簽名")
     
     
     
