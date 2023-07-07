@@ -409,6 +409,32 @@
                                 <field name="abnormal" string="收費異常" />
                                 <field name="abnormalreason" string="收費異常原因" />
                             </group>
+                            <group string="統一請款">
+                                <field name="applicant" string="申請人" />
+                                <field name="applicantunit" string="申請單位"/>
+                                <field name="phonenumber" string="連絡電話"/>
+                            </group>
+                            <group string="了解醫護人員說明醫療收費之原由且同意">
+                                <group>
+                                    <field name="agreeperson" widget="signature" string="同意人簽名/身分" />
+                                </group>
+                                <group>
+                                    <field name="witness" widget="signature" string="見證人簽名/身分"/>
+                                </group>
+                            </group>
+                            <group string="我同意轉診至醫院接受治療，且同意醫療中心安排之救護車前往並付費">
+                                <group>
+                                    <field name="agreeperson1" widget="signature" string="同意人簽名/身分" />
+                                </group>
+                                <group>
+                                    <field name="witness1" widget="signature" string="見證人簽名/身分"/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="attending_physician_id" string="醫師" />
+                                <field name="attending_nurse_id" string="護理師"/>
+                                <field name="emt" string="EMT"/>
+                            </group>
                         </page>
                         <page string="通報作業"> <!--廖庭萱test-->
                             <group>
