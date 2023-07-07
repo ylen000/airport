@@ -327,13 +327,13 @@
                              <field name="doctor_remark" string="備註" />
                         </group>
                         <group  string="簽署">
-                            <group>
+                            <group style="width:1000px">
                                 <group>
-                                    <field name="emt_sign" widget="signature" string="院長簽名"/>
+                                    <field name="sup_sign" widget="signature" string="院長簽名"/>
                                 </group> 
                                 
                                 <group>
-                                    <field name="attending_physician_id" string="診治醫師" />
+                                    <field name="doctor_sign" widget="signature" string="診治醫師簽名" />
                                 </group> 
                                 
                             </group>
