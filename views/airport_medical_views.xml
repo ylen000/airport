@@ -342,68 +342,72 @@
                         <page string="醫療收費" >
                             <group>
                                 <group string="疾病管制署篩檢">
-                                    <field name="assist_screening_id" string="協助篩檢" />
-                                    <field name="incident_place_id" string="喉嚨採檢" />
-                                    <field name="incident_time_id" string="抽血採檢" />
-                                    <field name="personal_opinion" string="其他" />
+                                    <field name="assistscreening" string="協助篩檢" />
+                                    <field name="throat" string="喉嚨採檢" />
+                                    <field name="blood" string="抽血採檢" />
+                                    <field name="otheropinion" string="其他" />
+                                    <field name="otheropinionname" string="名稱" attrs="{'invisible': [('otheropinion', '=', False)]}"/>
                                 </group>
                                 <group string="健康評估">
-                                    <field name="assist_screening_id" string="姓名"  />
-                                    <field name="assist_screening_id" string="關係"  />
-                                    <field name="personal_opinion" string="體溫"  />
+                                    <field name="name" string="姓名"  />
+                                    <field name="relation" string="關係"  />
+                                    <field name="temperature" string="體溫"  />
                                 </group>
                             </group>
                             <group string="轉診後送">
                                 <group>
                                     <group>
-                                        <field name="assist_screening_id" string="一般通關" />
+                                        <field name="generally" string="一般通關" />
                                     </group>
                                     <group>
-                                        <field name="assist_screening_id" string="緊急通關" />
+                                        <field name="urgent" string="緊急通關" />
                                     </group>
                                 </group>
                                 <group>
                                     <group>
-                                        <field name="assist_screening_id" string="公務門" />
+                                        <field name="businessdoor" string="公務門" />
                                     </group>
                                     <group>
-                                        <field name="assist_screening_id" string="機坪" />
+                                        <field name="apron" string="機坪" />
                                     </group>
                                 </group>
                             </group>
                             <group>
                                 <group string="救護車">
-                                    <field name="assist_screening_id" string="醫療中心" />
-                                    <field name="incident_place_id" string="民間" />
-                                    <field name="incident_time_id" string="消防隊" />
+                                    <field name="medicalcenter" string="醫療中心" />
+                                    <field name="folk" string="民間" />
+                                    <field name="folkyesno" string="民間名稱" attrs="{'invisible': [('folk', '=', False)]}"/>
+                                    <field name="firebrigade" string="消防隊" />
+                                    <field name="firebrigadeyesno" string="消防隊名稱" attrs="{'invisible': [('firebrigade', '=', False)]}"/>
                                 </group>
                                 <group string="轉送">
-                                    <field name="assist_screening_id" string="民間"  />
-                                    <field name="assist_screening_id" string="消防隊"  />
-                                    <field name="personal_opinion" string="轉送醫院"  />
-                                    <field name="personal_opinion" string="隨車人員" />
+                                    <field name="transferhospital" string="轉送醫院"  />
+                                    <field name="carattendant" string="隨車人員" />
                                 </group>
                             </group>
                             <group string="醫療費用">
-                                <field name="Phone" string="初診費"/>
-                                <field name="Phone" string="救護車費用"/>
+                                <field name="visitfee" string="初診費"/>
+                                <field name="ambulancefee" string="救護車費用"/>
                             </group>
                             <group>
                                 <group string="自付">
-                                    <field name="assist_screening_id" string="是否自付"/>
-                                    <field name="Phone" string="費用"/>
+                                    <field name="selfpay" string="自付"/>
+                                    <field name="selfpayyes" string="費用"  attrs="{'invisible': [('selfpay', '=', False)]}"/>
                                 </group>
                                 <group string="請款">
-                                    <field name="assist_screening_id" string="是否請款"/>
-                                    <field name="Phone" string="費用"/>
+                                    <field name="pleasepay" string="請款"/>
+                                    <field name="pleasepayyes" string="費用" attrs="{'invisible': [('pleasepay', '=', False)]}"/>
                                 </group>
                             </group>
                             <group string="自付">
-                                <field name="assist_screening_id" string="支付方式" />
-                                <field name="assist_screening_id" string="幣別" />
-                                <field name="assist_screening_id" string="兌換後台幣金額" />
-                                <field name="assist_screening_id" string="是否收費異常" />
-                                <field name="personal_opinion" string="收費異常原因" />
+                                <field name="cash" string="現金" />
+                                <field name="twd" string="台幣" attrs="{'invisible': [('cash', '=', False)]}" />
+                                <field name="othercurrencies" string="其他幣別"  attrs="{'invisible': [('cash', '=', False)]}"/>
+                                <field name="currencies" string="幣別"  attrs="{'invisible': [('cash', '=', False)]}"/>
+                                <field name="afterexchange" string="兌換後台幣金額"  attrs="{'invisible': [('cash', '=', False)]}" />
+                                <field name="creditcard" string="刷卡" />
+                                <field name="abnormal" string="收費異常" />
+                                <field name="abnormalreason" string="收費異常原因" />
                             </group>
                         </page>
                         <page string="通報作業"> <!--廖庭萱test-->
