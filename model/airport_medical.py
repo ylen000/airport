@@ -171,6 +171,15 @@ class AirportMedical(models.Model):
     referral=fields.Boolean(string="建議轉診")
     photo = fields.Binary(string='上傳照片')
     photo1 = fields.Binary(string='')
+    input_field_hospital =  fields.Char(string="轉診醫院")
+    input_field_E = fields.Selection(string='睜眼反應',selection=[('1', '1'), ('2', '2'), ('3', '3'), ('4', '4')],
+                                         help="Type is used to separate Leads and Opportunities")
+    
+    input_field_V =  fields.Selection(string="語言反應",selection=[('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5')],
+                                         help="Type is used to separate Leads and Opportunities")
+    
+    input_field_M =  fields.Selection(string="動作反應",selection=[('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'), ('6', '6')],
+                                         help="Type is used to separate Leads and Opportunities")
     
     
     
