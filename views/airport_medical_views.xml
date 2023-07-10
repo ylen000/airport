@@ -294,7 +294,7 @@
                                     </group>
                                 </group>
                                 <group string="傷口照片">
-                                    <group style="width:400px">
+                                    <group style="width:350px">
                                     <group>
                                          <field name="photo" widget="image" filename="name" string="照片1"/>
                                     </group> 
