@@ -167,10 +167,8 @@ class AirportMedical(models.Model):
     checking_time = fields.Datetime(string='檢查時間', default=datetime.datetime.now(), readonly=True)
     sup_sign=fields.Binary(string="院長簽名")
     doctor_sign=fields.Binary(string="診治醫師簽名")
-<<<<<<< HEAD
     icd10_category_id=fields.Many2one('airport.medical.icd10.category')
     icd10_category1_id=fields.Many2one('airport.medical.icd10.category1')
-=======
     Quadruple_single=fields.Boolean(string="簽四聯單")
     referral=fields.Boolean(string="建議轉診")
     photo = fields.Binary(string='上傳照片')
@@ -184,7 +182,6 @@ class AirportMedical(models.Model):
     
     input_field_M =  fields.Selection(string="動作反應",selection=[('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'), ('6', '6')],
                                          help="Type is used to separate Leads and Opportunities")
->>>>>>> 164f772d8dccb5b77db352ce740befacd290735b
     
     
     
