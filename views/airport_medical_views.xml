@@ -135,14 +135,14 @@
                                 </group>
                                 <group>
                                 <group>
-                                <field name="medical_bills_yes" string="是" />
+                                <field name="medical_bills_yes" string="是" attrs="{'readonly': [('medical_bills_no', '=', True)]}" />
                                 </group>
                                 <group>
-                                <field name="medical_bills_no" string="否" />
+                                <field name="medical_bills_no" string="否" attrs="{'readonly': [('medical_bills_yes', '=', True)]}" />
                                 </group>
                                 </group>
                                 <group>
-                                <field name="charge_amount" string="收費金額" />
+                                <field name="charge_amount" string="收費金額" attrs="{'invisible': [('medical_bills_yes', '=', False)]}"/>
                                 </group>
                                 <group>
                                 <field name="attending_physician_id" string="醫師" />
