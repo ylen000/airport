@@ -135,14 +135,14 @@
                                 </group>
                                 <group>
                                 <group>
-                                <field name="medical_bills_yes" string="是" />
+                                <field name="medical_bills_yes" string="是" attrs="{'readonly': [('medical_bills_no', '=', True)]}" />
                                 </group>
                                 <group>
-                                <field name="medical_bills_no" string="否" />
+                                <field name="medical_bills_no" string="否" attrs="{'readonly': [('medical_bills_yes', '=', True)]}" />
                                 </group>
                                 </group>
                                 <group>
-                                <field name="charge_amount" string="收費金額" />
+                                <field name="charge_amount" string="收費金額" attrs="{'invisible': [('medical_bills_yes', '=', False)]}"/>
                                 </group>
                                 <group>
                                 <field name="attending_physician_id" string="醫師" />
@@ -170,19 +170,20 @@
                                 </group>
                                 <group>
                                     <field name="attending_nurse_id" string="護士" />
-                                    <field name="content" string="內容" />
+                                    <field name="content" string="內容" style="border: 1px solid black;"/>
                                 </group>
                             </group> 
-                            <table>
-                                <button name="record" string="紀錄" icon="fa-check" type="object" />
+                            <table style="margin-left:200px;">
+                                <button name="record" string="紀錄" icon="fa-check" type="object"/>
                                 <button name="reset" string="重寫" icon="fa-times" type="object" />
                             </table>
+                            
                             <group>
                              <field name="current_time"/>
                              <field name="display_content" readonly="1"/>
                             </group>
                         </page>
-                        <page string="醫療紀錄" >
+                        <page string="醫療紀錄">
                            <group>
                                 <group string="病情摘要">
                                     <field name="chief_complaint_id" string="主訴" />
@@ -198,10 +199,10 @@
                                          <field name="temperature_status" string="體溫狀態" readonly="1"/>
                                      </group> 
                                      <group>
-                                         <field name="pulse" string="脈搏" />
+                                         <field name="pulse" string="脈搏(次/min)" />
                                      </group> 
                                      <group>
-                                         <field name="breath" string="呼吸" />
+                                         <field name="breath" string="呼吸(次/min)" />
                                      </group> 
                                      <group>
                                          <field name="blood_pressureh" string="血壓(mmHg)" />
@@ -221,6 +222,13 @@
                                      <group>
                                          <field name="is_active2" string="GCS" attrs="{'readonly': [('is_active1', '=', True)]}"/>
                                      </group> 
+                                     <group>
+                                     </group> 
+                                     <group name="input_group" attrs="{'invisible': [('is_active2', '=', False)]}">
+                                         <field name="input_field_E" string="睜眼反應(E)"/>
+                                         <field name="input_field_V" string="語言反應(V)"/>
+                                         <field name="input_field_M" string="動作反應(M)"/>
+                                     </group>
                                 </group>
                                 </group>
                                 <group string="過去病史">
@@ -258,11 +266,51 @@
                                     <group>
                                         <field name="other" string="其他"/>
                                     </group> 
+                              
                                     </group>
                                 </group>
-                                
+                                <group string="初步診斷結果">
+                                    <group>
+                                    <group>
+                                        <field name="diagnosis_id" string="初步診斷" />
+                                    </group> 
+                                    <group>
+                                        <field name="diagnosis_1" string="" />
+                                    </group> 
+                                    </group>                  
+                                </group>
+                                <group string="處理摘要">
+                                    <group>
+                                    <group>
+                                        <field name="Quadruple_single" string="簽四聯單"/>
+                                    </group> 
+                                    <group>
+                                         <field name="referral" string="建議轉診"/>
+                                    </group> 
+                                    <group>
+                                    </group>
+                                    <group name="input_group" attrs="{'invisible': [('referral', '=', False)]}">
+                                         <field name="input_field_hospital" string="轉診醫院"/>
+                                    </group>
+                                    </group>
+                                    <group>
+                                    <group>
+                                         <field name="attending_physician_id" string="醫師" />
+                                    </group>
+                                    
+                                    </group>
+                                </group>
+                                <group string="傷口照片">
+                                    <group style="width:350px">
+                                    <group>
+                                         <field name="photo" widget="image" filename="name" string="照片1"/>
+                                    </group> 
+                                    <group>
+                                         <field name="photo1" widget="image" filename="name" string="照片2"/>
+                                    </group> 
+                                    </group>
+                                </group>           
                         </page>
-                        
                         <page string="處置紀錄">
                             <group>
                                 <field name="chief_complaint_id" string="主訴" />
