@@ -296,10 +296,10 @@
                                 <group string="傷口照片">
                                     <group style="width:400px">
                                     <group>
-                                         <field name="photo" widget="image" filename="name" string="上傳照片1"/>
+                                         <field name="photo" widget="image" filename="name" string="照片1"/>
                                     </group> 
                                     <group>
-                                         <field name="photo1" widget="image" filename="name" string="上傳照片2"/>
+                                         <field name="photo1" widget="image" filename="name" string="照片2"/>
                                     </group> 
                                     </group>
                                 </group>           
