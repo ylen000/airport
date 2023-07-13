@@ -103,7 +103,12 @@
                                 </group>
 
                                 <group>
+                                <group>
                                 <field name="notification_time" string="通報時間" />
+                                </group>
+                                <group>
+                                <field name="notification_time" string="通報時間" />
+                                </group>
                                 </group>
 
                                 <group>
