@@ -32,6 +32,8 @@
         'views/airport_menus.xml',
         'views/airport_medical_passing_views.xml',
         'views/airport_medical_exit_views.xml',
+        'views/airport_medical_icd10_category.xml',
+        'views/airport_medical_icd10_category1.xml',
         'data/airport.medical.identity.csv',
         'data/airport.medical.sex.csv',
         'data/airport.medical.come.csv',
@@ -51,7 +53,9 @@
         'data/airport.medical.attending.physician.csv',
         'data/airport.medical.attending.nurse.csv',
         'data/airport.medical.passing.csv',
-        'data/airport.medical.exit.csv'
+        'data/airport.medical.exit.csv',
+        'data/airport.medical.icd10.category.csv',
+        'data/airport.medical.icd10.category1.csv'
        
     ],
     'application': True,
