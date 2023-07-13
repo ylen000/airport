@@ -107,7 +107,7 @@
                                 <field name="notification_time" string="通報時間" />
                                 </group>
                                 <group>
-                                <button name="record" string="刷新" type="object" />
+                                <button name="refresh_time" string="刷新" type="object" />
                                 </group>
                                 </group>
 
@@ -116,7 +116,7 @@
                                 <field name="clinic_time" string="診療時間"  />
                                 </group>
                                 <group>
-                                <button name="record" string="刷新" type="object"/>
+                                <button name="refresh_time1" string="刷新" type="object"/>
                                 </group>
                                 </group>
 

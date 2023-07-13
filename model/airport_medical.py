@@ -49,7 +49,11 @@ class AirportMedical(models.Model):
     treatment_hospital_id = fields.Many2one('airport.medical.treatment.hospital', string='若在醫院的處置')
     personal_opinion = fields.Text(string='個人意見')
     notification_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='通報時間')
+    def refresh_time(self):
+        self.notification_time = fields.Datetime.now()
     clinic_time = fields.Datetime(default=lambda self: fields.Datetime.now(), string='診療時間')
+    def refresh_time1(self):
+        self.clinic_time = fields.Datetime.now()
     attending_physician_id = fields.Many2one('airport.medical.attending.physician', string='負責醫師')
     attending_nurse_id = fields.Many2one('airport.medical.attending.nurse', string='隨行護士')
     test1 = fields.Char(string='test')
