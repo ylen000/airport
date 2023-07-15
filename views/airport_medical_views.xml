@@ -354,7 +354,7 @@
                         <group string="診斷結果">
                             <group>
                                 <group>
-                                    <field name="diagnosis_id" string="診斷"/>
+                                    <field name="icd10_category_id" string="診斷"/>
                                 </group>
                                 <group>
                                     <field name="diagnosis_category" string="-" />
