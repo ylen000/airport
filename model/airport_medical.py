@@ -188,6 +188,29 @@ class AirportMedical(models.Model):
     
     input_field_M =  fields.Selection(string="動作反應",selection=[('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'), ('6', '6')],
                                          help="Type is used to separate Leads and Opportunities")
+    total_score = fields.Integer(string="昏迷指數總分", compute="_compute_total_score", store=True)
+    comatose_level = fields.Char(string="昏迷程度", compute="_compute_comatose_level", store=True)
+
+    @api.depends('input_field_E', 'input_field_V', 'input_field_M')
+    def _compute_total_score(self):
+        for record in self:
+            score_E = int(record.input_field_E) if record.input_field_E else 0
+            score_V = int(record.input_field_V) if record.input_field_V else 0
+            score_M = int(record.input_field_M) if record.input_field_M else 0
+            record.total_score = score_E + score_V + score_M
+
+    @api.depends('total_score')
+    def _compute_comatose_level(self):
+        for record in self:
+            if 13 <= record.total_score <= 15:
+                record.comatose_level = '輕微昏迷'
+            elif 9 <= record.total_score <= 12:
+                record.comatose_level = '中度昏迷'
+            elif 3 <= record.total_score <= 8:
+                record.comatose_level = '重度昏迷'
+            else:
+                record.comatose_level = ''
+    
     
     
     

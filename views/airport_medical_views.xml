@@ -238,6 +238,8 @@
                                          <field name="input_field_E" string="睜眼反應(E)"/>
                                          <field name="input_field_V" string="語言反應(V)"/>
                                          <field name="input_field_M" string="動作反應(M)"/>
+                                         <field name="total_score"/>
+                                         <field name="comatose_level"/>
                                      </group>
                                 </group>
                                 </group>
