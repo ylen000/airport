@@ -497,6 +497,7 @@
                             </group>
                         </page>
                         <page string="通報作業"> <!--廖庭萱test-->
+                        <group>
                             <group string="落地時間紀錄">
                                 <group>
                                     <field name="landing_time_yesno" string="是否落地"  />
@@ -552,6 +553,7 @@
                                     <field name="checking_time" string="檢查時間"/>
                                 </group>
                             </group>
+                        </group>
                         </page>
                     </notebook>
                 </sheet>
