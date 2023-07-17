@@ -497,41 +497,38 @@
                             </group>
                         </page>
                         <page string="通報作業"> <!--廖庭萱test-->
-                        <group>
                             <group string="落地時間紀錄">
-                                <group>
                                     <field name="landing_time_yesno" string="是否落地"  />
-                                </group>
-                                <group>
                                     <field name="landing_time" string="落地時間" attrs="{'invisible': [('landing_time_yesno', '=', False)]}"/>
-                                </group>
                             </group>
                             <group>
-                            <!-- <field name="landing_time_yesno" string="是否落地"/> -->
-                                <group  string="通報紀錄">
+                            </group>
+                            <group  string="通報紀錄">
                                     <field name="informing_time" string="通報時間"/>
                                     <field name="reporting_unit" string="通報單位"/>
                                     <field name="reporting_unit_personnel" string="通報人員"/>
                                     <field name="reporting_unit_personnel_phone" string="電話"/>
-                                </group>
-                                <group string="通知營安處">
+                            </group>
+                            <group string="通知營安處">
                                     <field name="inform_campingoffice_time" string="通知營安處時間"/>
                                     <field name="arrive_yesno" string="是否到達現場" />
                                     <field name="is_active5" string="是" attrs="{'readonly': [('is_active6', '=', True)]}"/>
                                     <field name="is_active6" string="否" attrs="{'readonly': [('is_active5', '=', True)]}"/>
-                                </group>
                             </group>
-                            <group>
-                                <group string="事故地點">
+                            <group string="事故地點">
+                                    <group>
                                     <field name="informing_place" string="通報事故地點" />
+                                    </group>
+                                    <group>
                                     <field name="is_active7" string="T1" attrs="{'readonly': [('is_active8', '=', True)]}"/>
                                     <field name="active7_yes" string="名稱" attrs="{'invisible': [('is_active7', '=', False)]}"/>
                                     <field name="is_active8" string="T2" attrs="{'readonly': [('is_active7', '=', True)]}"/>
                                     <field name="active8_yes" string="名稱" attrs="{'invisible': [('is_active8', '=', False)]}"/>
                                     <field name="informing_place_input_field" string="其他地點"/>
-                                </group>
-                                <group string="醫護抵達紀錄">
-                                    <field name="arriving_time" string="醫護抵達時間"/>
+                                    </group>
+                            </group>
+                            <group string="醫護抵達紀錄">
+                                <field name="arriving_time" string="醫護抵達時間"/>
                                     <group>
                                         <group>
                                             <field name="arrive_in10mins" string="是否十分鐘內抵達" />
@@ -548,12 +545,10 @@
                                             <field name="arrive_in10mins_input_field" string="原因"/>
                                         </group>
                                     </group>
-                                </group>
-                                <group>
-                                    <field name="checking_time" string="檢查時間"/>
-                                </group>
                             </group>
-                        </group>
+                            <group>
+                                    <field name="checking_time" string="檢查時間"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
