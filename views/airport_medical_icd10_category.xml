@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="airport_medical_icd10_category" model="ir.actions.act_window">
+    <record id="airport_medical_icd10_category_action" model="ir.actions.act_window">
         <field name="name">ICD10種類名稱</field>
         <field name="res_model">airport.medical.icd10.category</field>
         <field name="view_mode">tree,form</field>
