@@ -356,10 +356,10 @@
                         <group string="診斷結果">
                             <group>
                                 <group>
-                                    <field name="icd10_category_id" string="診斷"/>
+                                    <field style="width:300px;" name="icd10_category_id" string="診斷-類別名"/>
                                 </group>
                                 <group>
-                                    <field name="diagnosis_category" string="-" />
+                                    <field name="icd10_category1_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',1)]}" />
                                 </group>
                             </group>
                             <group>
