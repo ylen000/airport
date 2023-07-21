@@ -384,7 +384,7 @@
                             </group>
                         </group>
                         <group>
-                             <field style="height:100px; " name="doctor_remark" string="備註" />
+                             <field style="height:100px; border: 0.5px solid black; " name="doctor_remark" string="備註" />
                         </group>
                         <group  string="簽署">
                             <group style="width:1000px">
