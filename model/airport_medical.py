@@ -65,12 +65,18 @@ class AirportMedical(models.Model):
     Airplane = fields.Char(string='班機')
     exit_id  = fields.Many2one('airport.medical.exit', string='出入境')
     content= fields.Text(string='內容')
-    current_time = fields.Datetime(string='紀錄時間', default=datetime.datetime.now(), readonly=True)
-    display_content = fields.Text(string='紀錄內容', readonly=True)
+    current_time = fields.Datetime(string='紀錄時間', readonly=True)
+    display_content = fields.Text(string='紀錄內容')
     def record(self):
         self.display_content = self.content
+        if self.display_content:
+            self.current_time = datetime.datetime.now()
+        else:
+            self.current_time = False
+        self.content = False
     def reset(self):
         self.content = False
+        self.current_time = False
     doctor_remark = fields.Char(string='醫師囑言及備註')
     diagnosis_category = fields.Many2one('airport.medical.diagnosis', string='')
     diagnosis_detail = fields.Many2one('airport.medical.diagnosis')

@@ -183,23 +183,22 @@
                                     <field name="content" string="內容" style="border: 1px solid black;"/>
                                 </group>
                             </group> 
-                            <table style="margin-left:200px;">
-                                <button name="record" string="紀錄" icon="fa-check" type="object"/>
-                                <button name="reset" string="重寫" icon="fa-times" type="object" />
-                            </table>
-                            
+                             <table style="margin-left:200px;">
+                                <button name="record" string="紀錄" icon="fa-check" type="object" attrs="{'invisible': [('content', '=', False)]}"/>
+                                <button name="reset" string="重寫" icon="fa-times" type="object" attrs="{'invisible': [('content', '=', False)]}"/>
+                            </table>      
                             <group>
-                             <field name="current_time"/>
-                             <field name="display_content" readonly="1"/>
+                               <field name="current_time"/>
+                               <field name="display_content" readonly="1"/>
                             </group>
                         </page>
                         <page string="醫療紀錄">
                            <group>
-                                <group string="病情摘要">
+                                <group string="病情摘要" style="font-size:16px">
                                     <field name="chief_complaint_id" string="主訴" />
                                 </group>
                             </group>
-                                <group  string="生命跡象">
+                                <group  string="生命跡象" style="font-size:16px">
                                 <group>
                                      <group>
                                          <field name="temperature" string="體溫(℃)" placeholder="輸入兩位整數和一位小數點"/>
@@ -243,7 +242,7 @@
                                      </group>
                                 </group>
                                 </group>
-                                <group string="過去病史">
+                                <group string="過去病史" style="font-size:16px">
                                 <group>
                                      <group>
                                          <field name="allergy" string="藥物過敏" />
@@ -261,7 +260,7 @@
                                      </group>
                                 </group>
                                 </group>
-                                <group string="身體檢查">
+                                <group string="身體檢查" style="font-size:16px">
                                     <group>
                                     <group>
                                         <field name="head" string="頭頸部"/>
@@ -281,7 +280,7 @@
                               
                                     </group>
                                 </group>
-                                <group string="初步診斷結果">
+                                <group string="初步診斷結果" style="font-size:16px">
                                     <group>
                                     <group>
                                         <field name="diagnosis_id" string="初步診斷" />
@@ -291,7 +290,7 @@
                                     </group> 
                                     </group>                  
                                 </group>
-                                <group string="處理摘要">
+                                <group string="處理摘要" style="font-size:16px">
                                     <group>
                                     <group>
                                         <field name="Quadruple_single" string="簽四聯單"/>
@@ -312,13 +311,13 @@
                                     
                                     </group>
                                 </group>
-                                <group string="傷口照片">
+                                <group string="傷口照片" style="font-size:16px">
                                     <group style="width:350px">
-                                    <group>
-                                         <field name="photo" widget="image" filename="name" string="照片1"/>
+                                     <group>
+                                         <field name="photo" widget="image" filename="name" string="照片1" style="border:2px solid black; background-color:	#F1E1FF;"/>
                                     </group> 
                                     <group>
-                                         <field name="photo1" widget="image" filename="name" string="照片2"/>
+                                         <field name="photo1" widget="image" filename="name" string="照片2" style="border:2px solid black; background-color:#F1E1FF;"/>
                                     </group> 
                                     </group>
                                 </group>           
