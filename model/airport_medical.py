@@ -179,7 +179,7 @@ class AirportMedical(models.Model):
     informing_place_input_field = fields.Char(string="其他地點")
     arriving_time = fields.Datetime(string='醫護抵達時間', default=lambda self: fields.Datetime.now(),readonly=False)
     def refresh_arriving_time(self):
-        self.inform_arriving_time = fields.Datetime.now()
+        self.arriving_time = fields.Datetime.now()
     arrive_in10mins = fields.Char(string="是否十分鐘內抵達")
     is_active9 = fields.Boolean(string="是")
     is_active10 = fields.Boolean(string="否")
