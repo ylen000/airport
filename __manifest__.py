@@ -55,7 +55,8 @@
         'data/airport.medical.passing.csv',
         'data/airport.medical.exit.csv',
         'data/airport.medical.icd10.category.csv',
-        'data/airport.medical.icd10.category1.csv'
+        'data/airport.medical.icd10.category1.csv',
+        'data/airport.medical.icd10.csv'
        
     ],
     'application': True,

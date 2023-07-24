@@ -29,6 +29,7 @@ class AirportMedical(models.Model):
     immigration_status2 = fields.Boolean(string='入境')
     immigration_status3 = fields.Boolean(string='過境')
     initial_diagnosis = fields.Text(string='初步診斷')
+    initial_diagnosis_icd10 =fields.Many2one('airport.medical.icd10.category')
     follow_up_results = fields.Selection(string='後續結果',selection=[('自行返家', '自行返家'), ('繼續搭機', '繼續搭機'), ('轉送至', '轉送至:'), ('醫療中心觀察', '醫療中心觀察'), ('空跑', '空跑'), ('其他', '其他')],
         help="Type is used to separate Leads and Opportunities")
     follow_up_results_replenish = fields.Char(string=' ')
