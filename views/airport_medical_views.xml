@@ -125,7 +125,7 @@
                                 </group>
 
                                 <group>
-                                
+                                <field name="initial_diagnosis_icd10" string="ICD10" />
                                 </group>
                                                        
                                 <group>
