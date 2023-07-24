@@ -503,37 +503,34 @@
                             <group>
                                 <group  string="通報紀錄">
                                     <field name="informing_time" string="通報時間"/>
+                                    <!-- <button name="refresh_informing_time" string="刷新" type="object" class="btn-primary"/> -->
                                     <field name="reporting_unit" string="通報單位"/>
                                     <field name="reporting_unit_personnel" string="通報人員"/>
                                     <field name="reporting_unit_personnel_phone" string="電話"/>
                                 </group>
                                 <group string="通知營安處">
-                                    <field name="inform_campingoffice_time" string="通知營安處時間"/>
+                                    <field name="inform_campingoffice_time" string="通知營安處時間" attrs="{'readonly': [('inform_campingoffice_time', '=', False)]}"/>
                                     <field name="is_active5" string="有到達現場" attrs="{'readonly': [('is_active6', '=', True)]}"/>
                                     <field name="is_active6" string="沒有到達現場" attrs="{'readonly': [('is_active5', '=', True)]}"/>
                                 </group>
                             </group>
                             <group>
                                 <group string="通報事故地點">
-                                    <group>
                                         <field name="is_active7" string="T1" attrs="{'readonly': [('is_active8', '=', True)]}"/>
                                         <field name="active7_yes" string="名稱" attrs="{'invisible': [('is_active7', '=', False)]}"/>
                                         <field name="is_active8" string="T2" attrs="{'readonly': [('is_active7', '=', True)]}"/>
                                         <field name="active8_yes" string="名稱" attrs="{'invisible': [('is_active8', '=', False)]}"/>
                                         <field name="informing_place_input_field" string="其他地點"/>
-                                    </group>
                                 </group>
                                 <group string="醫護抵達紀錄">
-                                    <group>
-                                        <field name="arriving_time" string="醫護抵達時間"/> 
+                                        <field name="arriving_time" string="醫護抵達時間" attrs="{'readonly': [('arriving_time', '=', False)]}"/> 
                                         <field name="is_active9" string="於十分鐘內抵達" attrs="{'readonly': [('is_active10', '=', True)]}"/>
                                         <field name="is_active10" string="於十分鐘後抵達" attrs="{'readonly': [('is_active9', '=', True)]}"/>
-                                        <field name="arrive_in10mins_input_field" string="原因" attrs="{'invisible': [('is_active10', '=', False)]}"/>
-                                    </group>    
+                                        <field name="arrive_in10mins_input_field" string="原因" attrs="{'invisible': [('is_active10', '=', False)]}"/>  
                                 </group>
                             </group>
                             <group string="檢查時間">
-                                    <field name="checking_time" string="檢查時間"/>
+                                    <field name="checking_time" string="檢查時間" attrs="{'readonly': [('checking_time', '=', False)]}"/>
                             </group>
                         </page>
                     </notebook>

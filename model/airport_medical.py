@@ -157,11 +157,17 @@ class AirportMedical(models.Model):
      # 廖庭萱
     landing_time_yesno = fields.Boolean(string='是')
     landing_time = fields.Datetime(string='落地時間', default=lambda self: fields.Datetime.now())
+    def refresh_landing_time(self):
+        self.landing_time = fields.Datetime.now()
     informing_time = fields.Datetime(string='通報時間', default=lambda self: fields.Datetime.now())
+    def refresh_informing_time(self):
+        self.informing_time = fields.Datetime.now()
     reporting_unit = fields.Char(string="通報單位")
     reporting_unit_personnel = fields.Char(string="通報單位人員")
     reporting_unit_personnel_phone = fields.Char(string="電話")
-    inform_campingoffice_time = fields.Datetime(string='通知營安處時間', default=lambda self: fields.Datetime.now(), readonly=True)
+    inform_campingoffice_time = fields.Datetime(string='通知營安處時間', default=lambda self: fields.Datetime.now(),readonly=False)
+    def refresh_campingoffice_time(self):
+        self.inform_campingoffice_time = fields.Datetime.now()
     arrive_yesno = fields.Char(string='是否到達現場')
     is_active5 = fields.Boolean(string="是")
     is_active6 = fields.Boolean(string="否")
@@ -171,12 +177,16 @@ class AirportMedical(models.Model):
     active8_yes = fields.Char(string='T2名稱')
     informing_place = fields.Char(string='通報事故地點')
     informing_place_input_field = fields.Char(string="其他地點")
-    arriving_time = fields.Datetime(string='醫護抵達時間', default=lambda self: fields.Datetime.now(), readonly=True)
+    arriving_time = fields.Datetime(string='醫護抵達時間', default=lambda self: fields.Datetime.now(),readonly=False)
+    def refresh_arriving_time(self):
+        self.inform_arriving_time = fields.Datetime.now()
     arrive_in10mins = fields.Char(string="是否十分鐘內抵達")
     is_active9 = fields.Boolean(string="是")
     is_active10 = fields.Boolean(string="否")
     arrive_in10mins_input_field =  fields.Char(string="原因")
-    checking_time = fields.Datetime(string='檢查時間', default=lambda self: fields.Datetime.now(), readonly=True)
+    checking_time = fields.Datetime(string='檢查時間', default=lambda self: fields.Datetime.now())
+    def refresh_checking_time(self):
+        self.checking_time = fields.Datetime.now()
     sup_sign=fields.Binary(string="院長簽名")
     doctor_sign=fields.Binary(string="診治醫師簽名")
     icd10_category_id=fields.Many2one('airport.medical.icd10.category')
