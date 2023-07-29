@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="airport_medical_icd10_category1_action" model="ir.actions.act_window">
-        <field name="name">疾病名稱</field>
+        <field name="name">某些傳染病和寄生蟲病</field>
         <field name="res_model">airport.medical.icd10.category1</field>
         <field name="view_mode">tree,form</field>
     </record>

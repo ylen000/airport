@@ -207,6 +207,8 @@ class AirportMedical(models.Model):
                                          help="Type is used to separate Leads and Opportunities")
     total_score = fields.Integer(string="昏迷指數總分", compute="_compute_total_score", store=True)
     comatose_level = fields.Char(string="昏迷程度", compute="_compute_comatose_level", store=True)
+ 
+    
 
     @api.depends('input_field_E', 'input_field_V', 'input_field_M')
     def _compute_total_score(self):
@@ -227,7 +229,5 @@ class AirportMedical(models.Model):
                 record.comatose_level = '重度昏迷'
             else:
                 record.comatose_level = ''
-    
-    
     
     

@@ -22,3 +22,4 @@ from . import airport_medical_exit
 from . import airport_medical_icd10_category
 from . import airport_medical_icd10_category1
 
+
