@@ -78,7 +78,7 @@ class AirportMedical(models.Model):
     def reset(self):
         self.content = False
         self.current_time = False
-    doctor_remark = fields.Char(string='醫師囑言及備註')
+    doctor_remark = fields.Text(string='醫師囑言及備註')
     diagnosis_category = fields.Many2one('airport.medical.diagnosis', string='')
     diagnosis_detail = fields.Many2one('airport.medical.diagnosis')
     comment_id= fields.Many2one('airport.medical.comment', string='醫師囑言')
