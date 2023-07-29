@@ -181,8 +181,9 @@
                                 <button name="reset" string="重寫" icon="fa-times" type="object" attrs="{'invisible': [('content', '=', False)]}"/>
                             </table>      
                             <group>
-                               <field name="current_time"/>
-                               <field name="display_content" readonly="1"/>
+                                <field name="current_time"/>
+                                <field name="display_content" readonly="1"/>
+                                <field name="total_record_count"/>
                             </group>
                         </page>
                         <page string="醫療紀錄">

@@ -68,16 +68,29 @@ class AirportMedical(models.Model):
     content= fields.Text(string='內容')
     current_time = fields.Datetime(string='紀錄時間', readonly=True)
     display_content = fields.Text(string='紀錄內容')
+    record_count = fields.Integer(string='總記錄筆數')
+    total_record_count = fields.Char(string='總紀錄筆數', compute='_compute_total_record_count')
     def record(self):
-        self.display_content = self.content
-        if self.display_content:
+        if self.content:
+            self.record_count += 1
+
+            if not self.display_content:
+                self.display_content = f"{self.record_count}. {self.content}"
+            else:
+                self.display_content += f"\n{self.record_count}. {self.content}"
+
             self.current_time = datetime.datetime.now()
-        else:
-            self.current_time = False
-        self.content = False
+            self.content = False
     def reset(self):
-        self.content = False
-        self.current_time = False
+        if not self.display_content:
+            self.content = False
+        else:
+            self.content = False    
+        
+    @api.depends('record_count')
+    def _compute_total_record_count(self):
+        for record in self:
+            record.total_record_count = f"{record.record_count} 筆"
     doctor_remark = fields.Text(string='醫師囑言及備註')
     diagnosis_category = fields.Many2one('airport.medical.diagnosis', string='')
     diagnosis_detail = fields.Many2one('airport.medical.diagnosis')
