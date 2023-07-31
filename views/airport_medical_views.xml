@@ -482,7 +482,7 @@
                             <group>
                                 <group  string="通報紀錄">
                                     <group>
-                                        <field name="informing_time"   string="通報時間"/>
+                                        <field name="informing_time"   string="通報時間" style="width:20em;"/>
                                         <button name="refresh_informing_time" string="refresh" type="object" class="btn-primary"/>
                                     </group>
                                     <group>
@@ -496,8 +496,8 @@
                                 </group>
                                 <group string="通知營安處">
                                     <group>
-                                        <field name="inform_campingoffice_time" string="通知營安處時間" attrs="{'readonly': [('inform_campingoffice_time', '=', False)]}"/>
-                                        <button name="refresh_campingoffice_time" string="refresh" type="object" class="btn-primary"/>
+                                        <field name="inform_campingoffice_time" string="通知營安處時間" attrs="{'readonly': [('inform_campingoffice_time', '=', False)]}" style="width:20em;"/>
+                                        <button name="refresh_campingoffice_time" string="refresh" type="object" />
                                     </group>
                                     <group>
                                     </group>
@@ -517,7 +517,7 @@
                                 </group>
                                 <group string="醫護抵達紀錄">
                                     <group>
-                                        <field name="arriving_time" string="醫護抵達時間" attrs="{'readonly': [('arriving_time', '=', False)]}"/>
+                                        <field name="arriving_time" string="醫護抵達時間" attrs="{'readonly': [('arriving_time', '=', False)]}" style="width:20em;"/>
                                         <button name="refresh_arriving_time" string="refresh" type="object" class="btn-primary"/>
                                     </group>
                                     <group>
