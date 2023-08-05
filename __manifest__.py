@@ -34,6 +34,13 @@
         'views/airport_medical_exit_views.xml',
         'views/airport_medical_icd10_category_views.xml',
         'views/airport_medical_icd10_category1_views.xml',
+        'views/airport_medical_icd10_category2_views.xml',
+        'views/airport_medical_icd10_category3_views.xml',
+        'views/airport_medical_icd10_category4_views.xml',
+        'views/airport_medical_icd10_category5_views.xml',
+        'views/airport_medical_icd10_category6_views.xml',
+        'views/airport_medical_icd10_category7_views.xml',
+        'views/airport_medical_icd10_category8_views.xml',
         'data/airport.medical.identity.csv',
         'data/airport.medical.sex.csv',
         'data/airport.medical.come.csv',
@@ -56,7 +63,8 @@
         'data/airport.medical.exit.csv',
         'data/airport.medical.icd10.category.csv',
         'data/airport.medical.icd10.category1.csv',
-        'data/airport.medical.icd10.csv'
+        'data/airport.medical.icd10.csv',
+        'data/airport.medical.icd10.category3.csv'
        
     ],
     'application': True,

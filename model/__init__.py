@@ -21,5 +21,13 @@ from . import airport_medical_passing
 from . import airport_medical_exit
 from . import airport_medical_icd10_category
 from . import airport_medical_icd10_category1
+from . import airport_medical_icd10_category2
+from . import airport_medical_icd10_category3
+from . import airport_medical_icd10_category4
+from . import airport_medical_icd10_category5
+from . import airport_medical_icd10_category6
+from . import airport_medical_icd10_category7
+from . import airport_medical_icd10_category8
+
 
 
