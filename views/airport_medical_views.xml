@@ -114,17 +114,35 @@
                                 </group>
                                 
                                 
-                                <group>
-                                    <field name="icd10_category_id" string="類別"/>
-                                </group>
-                                <group>
-                                    <field name="icd10_category1_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',1)]}" />
+                                <group string="初次診斷">
+                                    <group>
+                                        <field name="icd10_category_id" string="類別"/>
+                                    </group>
+                                    <group>
+                                        <field name="icd10_category1_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',1)]}" />
+                                        <field name="icd10_category2_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',2)]}" />
+                                        <field name="icd10_category3_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',3)]}" />
+                                        <field name="icd10_category4_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',4)]}" />
+                                        <field name="icd10_category5_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',5)]}" />
+                                        <field name="icd10_category6_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',6)]}" />
+                                        <field name="icd10_category7_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',7)]}" />
+                                        <field name="icd10_category8_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',8)]}" />
+                                        <field name="icd10_category9_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',9)]}" />
+                                        <field name="icd10_category10_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',10)]}" />
+                                        <field name="icd10_category11_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',11)]}" />
+                                        <field name="icd10_category12_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',12)]}" />
+                                        <field name="icd10_category13_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',13)]}" />
+                                        <field name="icd10_category18_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',18)]}" />
+                                    </group>
+                                    <group>
+                                        <field string="描述" name="follow_up_results_replenish"  />
+                                    </group>
                                 </group>
                                 
                                 
                                                        
-                                <group>
-                                <field name="follow_up_results" string="後續結果" />
+                                <group string="後續結果">
+                                    <field name="follow_up_results" string="後續結果" />
                                 </group>
 
                                 <group>
@@ -337,11 +355,23 @@
                         </group>
                         <group string="診斷結果">
                             <group>
-                                <field style="width:max-content; " name="icd10_category_id" string="類別"/>
+                                <field name="icd10_category_id" string="類別"/>
                             </group>
                             <group>
-                                <field style="width:max-content;" name="icd10_category1_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',1)]}" />
-                                <field style="width:max-content;" name="icd10_category2_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',2)]}" />
+                                <field name="icd10_category1_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',1)]}" />
+                                <field name="icd10_category2_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',2)]}" />
+                                <field name="icd10_category3_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',3)]}" />
+                                <field name="icd10_category4_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',4)]}" />
+                                <field name="icd10_category5_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',5)]}" />
+                                <field name="icd10_category6_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',6)]}" />
+                                <field name="icd10_category7_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',7)]}" />
+                                <field name="icd10_category8_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',8)]}" />
+                                <field name="icd10_category9_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',9)]}" />
+                                <field name="icd10_category10_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',10)]}" />
+                                <field name="icd10_category11_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',11)]}" />
+                                <field name="icd10_category12_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',12)]}" />
+                                <field name="icd10_category13_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',13)]}" />
+                                <field name="icd10_category18_id" string="疾病名" attrs="{'invisible':[('icd10_category_id','!=',18)]}" />
                             </group>
                         </group>
                         <group string="醫師囑言備註">

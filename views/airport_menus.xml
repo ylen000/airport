@@ -34,6 +34,12 @@
             <menuitem id="airport_medical_icd10_category6_menu_action" action="airport_medical_icd10_category6_action" sequence="54" />
             <menuitem id="airport_medical_icd10_category7_menu_action" action="airport_medical_icd10_category7_action" sequence="55" />
             <menuitem id="airport_medical_icd10_category8_menu_action" action="airport_medical_icd10_category8_action" sequence="56" />
+            <menuitem id="airport_medical_icd10_category9_menu_action" action="airport_medical_icd10_category9_action" sequence="57" />
+            <menuitem id="airport_medical_icd10_category10_menu_action" action="airport_medical_icd10_category10_action" sequence="58" />
+            <menuitem id="airport_medical_icd10_category11_menu_action" action="airport_medical_icd10_category11_action" sequence="59" />
+            <menuitem id="airport_medical_icd10_category12_menu_action" action="airport_medical_icd10_category12_action" sequence="60" />
+            <menuitem id="airport_medical_icd10_category13_menu_action" action="airport_medical_icd10_category13_action" sequence="61" />
+            <menuitem id="airport_medical_icd10_category18_menu_action" action="airport_medical_icd10_category18_action" sequence="62" />
         </menuitem>
     </menuitem>
 </odoo>

@@ -28,6 +28,13 @@ from . import airport_medical_icd10_category5
 from . import airport_medical_icd10_category6
 from . import airport_medical_icd10_category7
 from . import airport_medical_icd10_category8
+from . import airport_medical_icd10_category9
+from . import airport_medical_icd10_category10
+from . import airport_medical_icd10_category11
+from . import airport_medical_icd10_category12
+from . import airport_medical_icd10_category13
+from . import airport_medical_icd10_category18
+from . import airport_medical_icd10
 
 
 

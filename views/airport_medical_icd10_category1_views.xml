@@ -11,7 +11,7 @@
         <field name="model">airport.medical.icd10.category1</field>
         <field name="arch" type="xml">
             <tree string="Channel" editable="bottom">
-                <field name="name" string="疾病名稱"/>
+                <field name="name" string="某些傳染病和寄生蟲疾病名稱"/>
             </tree>
         </field>
     </record>
@@ -23,7 +23,7 @@
             <form string="Test">
                 <sheet>
                     <group>
-                        <field name="name" string="疾病名稱"/>
+                        <field name="name" string="某些傳染病和寄生蟲疾病名稱"/>
                     </group>
                 </sheet>
             </form>

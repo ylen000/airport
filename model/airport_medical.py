@@ -212,6 +212,13 @@ class AirportMedical(models.Model):
     icd10_category6_id=fields.Many2one('airport.medical.icd10.category6')
     icd10_category7_id=fields.Many2one('airport.medical.icd10.category7')
     icd10_category8_id=fields.Many2one('airport.medical.icd10.category8')
+    icd10_category9_id=fields.Many2one('airport.medical.icd10.category9')
+    icd10_category10_id=fields.Many2one('airport.medical.icd10.category10')
+    icd10_category11_id=fields.Many2one('airport.medical.icd10.category11')
+    icd10_category12_id=fields.Many2one('airport.medical.icd10.category12')
+    icd10_category13_id=fields.Many2one('airport.medical.icd10.category13')
+    icd10_category18_id=fields.Many2one('airport.medical.icd10.category18')
+    initial_diagnosis_icd10=fields.Many2one('airport.medical.icd10')
     Quadruple_single=fields.Boolean(string="簽四聯單")
     referral=fields.Boolean(string="建議轉診")
     photo = fields.Binary(string='上傳照片')
@@ -227,7 +234,7 @@ class AirportMedical(models.Model):
                                          help="Type is used to separate Leads and Opportunities")
     total_score = fields.Integer(string="昏迷指數總分", compute="_compute_total_score", store=True)
     comatose_level = fields.Char(string="昏迷程度", compute="_compute_comatose_level", store=True)
- 
+    
     
 
     @api.depends('input_field_E', 'input_field_V', 'input_field_M')
@@ -249,5 +256,6 @@ class AirportMedical(models.Model):
                 record.comatose_level = '重度昏迷'
             else:
                 record.comatose_level = ''
+
     
     
