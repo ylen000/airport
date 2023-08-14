@@ -100,21 +100,21 @@
                                 <field name="notification_time" string="通報時間" />
                                 </group>
                                 <group>
-                                <button name="refresh_time" string="刷新" type="object" />
+                                <button name="refresh_time" string="refresh" type="object" class="btn-primary"/>
                                 </group>
                                 </group>
 
                                 <group>
                                 <group>
-                                <field name="clinic_time" string="診療時間"  />
+                                <field name="clinic_time" string="診療時間" />
                                 </group>
                                 <group>
-                                <button name="refresh_time1" string="刷新" type="object"/>
+                                <button name="refresh_time1" string="refresh" type="object" class="btn-primary"/>
                                 </group>
                                 </group>
 
                                 <group>
-                                <field name="initial_diagnosis" string="初步診斷" />
+                                <field style="border: 0.3px solid black;" name="initial_diagnosis" string="初步診斷" />
                                 </group>
 
                                 <group>
