@@ -36,5 +36,3 @@ from . import airport_medical_icd10_category13
 from . import airport_medical_icd10_category18
 from . import airport_medical_icd10
 
-
-
